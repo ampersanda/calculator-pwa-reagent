@@ -1,0 +1,18 @@
+//noinspection CssUnknownProperty
+.appearance(@rules){
+  -webkit-appearance: @rules;
+  -moz-appearance: @rules;
+  appearance: @rules;
+}
+
+.blank-ul(){
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blank-input(){
+  .appearance(none);
+  border: none;
+  background: transparent;
+}

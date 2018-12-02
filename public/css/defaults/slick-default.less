@@ -1,0 +1,67 @@
+@import './appearances';
+@import './filter';
+@import './motion';
+
+@slick-arrow: 40px;
+
+ul.slick-dots {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+
+  button {
+    .appearance(none);
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-prev, .slick-next {
+  cursor: pointer;
+  z-index: 1;
+  outline: none;
+
+  button& {
+    .appearance(none);
+    padding: 0;
+    border: none;
+  }
+}
+
+.slick--center-mode-overflown{
+  .slick-list {
+    overflow: visible !important;
+  }
+}
+
+.slick--center-mode {
+  .slick-slide {
+    .opacity(0);
+
+    .transitionAll(~'.6s ease', ~'opacity');
+
+    &.slick-active {
+      .opacity(100);
+    }
+  }
+
+  &.slick--center-mode-overflown {
+
+    .slick-slide:not(.slick-current) {
+      visibility: collapse;
+      .transition(~'opacity .6s ease, visibility .6s .61s');
+
+      &.slick-active {
+        visibility: visible;
+        .transition(~'opacity .6s ease, visibility .6s .61s');
+      }
+    }
+  }
+}

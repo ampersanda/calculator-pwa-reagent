@@ -1,0 +1,40 @@
+.transform(@rules) {
+  transform+_: @rules;
+  -webkit-transform+_: @rules;
+  //-moz-transform+_: @rules;
+  //-o-transform+_: @rules;
+  -ms-transform+_: @rules;
+  //-khtml-transform+_: @rules;
+}
+
+//noinspection CssUnknownProperty
+.transformReplace(@rules) {
+  transform: @rules;
+  -webkit-transform: @rules;
+  //-moz-transform: @rules;
+  //-o-transform: @rules;
+  -ms-transform: @rules;
+  //-khtml-transform-origin: @rules;
+}
+
+//noinspection CssUnknownProperty
+.transformOrigin(@rules){
+  transform-origin: @rules;
+  -webkit-transform-origin: @rules;
+  //-moz-transform-origin: @rules;
+  //-o-transform-origin: @rules;
+  -ms-transform-origin: @rules;
+  //-khtml-transform-origin: @rules;
+}
+
+.translate(@x, @y){
+  .transform(translate(@x, @y));
+}
+
+.matrix(@a, @b, @c, @d, @e, @f){
+  .transform(matrix(@a, @b, @c, @d, @e, @f));
+}
+
+.translate3d(@x, @y, @z){
+  .transform(translate3d(@x, @y, @z))
+}

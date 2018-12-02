@@ -3,7 +3,8 @@
  ["src"]
 
  :dependencies [[binaryage/devtools "0.9.7"]
-                [reagent "0.8.0-alpha2"]]
+                [reagent "0.8.0-alpha2"]
+                [funcool/cuerdas "2.0.5"]]
 
  ;; set an nrepl port for connection to a REPL.
  :nrepl        {:port 8777}

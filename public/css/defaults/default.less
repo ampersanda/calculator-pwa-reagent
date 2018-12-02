@@ -1,0 +1,78 @@
+@import '../variables';
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  zoom: 1;
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.with-cellophane-padding(){
+  padding: 112px 8%;
+}
+
+.default-hover(){
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul{
+  &.is--nothing{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.is--hidden{
+  display: none !important;
+}
+
+._c{
+  max-width: 1500px;
+  margin: 0 auto;
+
+  &&--tablet{
+    max-width: 767px;
+  }
+}
+
+.youtube-wrapper(){
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.img-wrap{
+  font-size: 0;
+}
+
+.full-width{
+  width: 100%;
+}
+
+input[type=checkbox], input[type=radio]{
+  cursor: pointer;
+
+  + label {
+    cursor: pointer;
+  }
+}

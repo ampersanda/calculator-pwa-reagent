@@ -1,0 +1,100 @@
+// rem
+
+.xxlg(@rules) {
+	@media screen and (min-width: 1501px) { @rules(); } // 1501px
+}
+
+.xlg(@rules) {
+	@media screen and (min-width: 1301px) and (max-width: 1500px) { @rules(); }
+}
+
+.lg(@rules) {
+	@media screen and (min-width: 1200px) and (max-width: 1300px) { @rules(); }
+}
+
+.lg-to-below(@rules) {
+	@media screen and (max-width: 1300px) { @rules(); }
+}
+
+.md(@rules) {
+	@media screen and (min-width: 992px) and (max-width: 1199px) { @rules(); }
+}
+
+.sm(@rules) {
+	@media screen and (min-width: 768px) and (max-width: 991px) { @rules(); }
+}
+
+.smmd(@rules){
+	@media screen and (min-width: 768px) and (max-width: 1199px) { @rules(); }
+}
+
+.md-to-below(@rules){
+	@media screen and (max-width: 1199px) { @rules(); }
+};
+
+.sm-to-below(@rules){
+	@media screen and (max-width: 991px) { @rules(); }
+}
+
+.except-xs(@rules) {
+	@media screen and (min-width: 768px) { @rules(); }
+}
+
+.xs(@rules) {
+	@media screen and (max-width: 767px) { @rules(); }
+}
+
+.xxsxs(@rules) {
+	@media screen and (min-width: 481px) and (max-width: 767px) { @rules(); }
+}
+
+.xmsxs(@rules) {
+	@media screen and (min-width: 625px) and (max-width: 767px) { @rules(); }
+}
+
+.xms(@rules) {
+	@media screen and (max-width: 624px) { @rules(); }
+}
+
+.xxsxms(@rules) {
+	@media screen and (min-width: 481px) and (max-width: 624px) { @rules(); }
+}
+
+.xxs(@rules) {
+	@media screen and (max-width: 480px) { @rules(); }
+}
+
+.vxxs(@rules) {
+	@media screen and (max-width: 320px) { @rules(); }
+}
+
+
+.print(@rules) {
+	@media print { @rules(); }
+}
+
+//noinspection CssInvalidMediaFeature
+.touchscreen(@rules){
+	@media screen and (pointer: coarse){
+		@rules();
+	}
+}
+
+//noinspection CssInvalidMediaFeature
+.mouse(@rules){
+	@media screen and (pointer: fine){
+		@rules();
+	}
+}
+
+.retina(@rules){
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+			@rules();
+	}
+}
