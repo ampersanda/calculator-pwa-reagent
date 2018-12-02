@@ -1,4 +1,4 @@
-# {{name}}
+# Calculator
 
 ## Run
 
