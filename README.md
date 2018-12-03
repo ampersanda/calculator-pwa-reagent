@@ -1,5 +1,7 @@
 # PWA Calculator
 
+http://calculator-9bd0c.firebaseapp.com
+
 ![Preview](./preview.gif "Preview")
 
 ## Run
