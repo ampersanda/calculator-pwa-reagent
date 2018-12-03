@@ -1,5 +1,7 @@
 # PWA Calculator
 
+![Preview](./preview.gif "Preview")
+
 ## Run
 
 ``` shell
