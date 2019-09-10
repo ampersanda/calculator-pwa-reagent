@@ -1,4 +1,3 @@
-;; shadow-cljs configuration
 {:source-paths
  ["src"]
 
@@ -6,7 +5,6 @@
                 [reagent "0.8.0-alpha2"]
                 [funcool/cuerdas "2.0.5"]]
 
- ;; set an nrepl port for connection to a REPL.
  :nrepl        {:port 8777}
 
  :builds
@@ -26,5 +24,4 @@
          ;; serve the public directory over http at port 8700
          :http-root    "public"
          :http-port    8700
-         :preloads     [devtools.preload]}
-        }}}
+         :preloads     [devtools.preload]}}}}
