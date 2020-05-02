@@ -1,7 +1,9 @@
 {
+  "name": "calculator-pwa-clojurescript",
+  "alias": ["calculator-pwa-clojurescript", "calc-cljs"],
   "github": {
     "autoAlias": true,
-    "enabled": true
+    "enabled": false
   },
   "cleanUrls": true,
   "trailingSlash": false,
