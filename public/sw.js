@@ -1,36 +1,35 @@
-self.addEventListener('install', function (event) {
-    console.log('service worker installed');
-    event.waitUntil(
-        caches.open('static')
-            .then(function (cache) {
-                cache.addAll([
-                    '/',
-                    '/index.html',
-                    '/js/compiled/main.js',
-                    '/images/loader.gif',
-                    '/css/style.css',
-                    '/favicon.ico',
-                    '/favicon/favicon-32x32.png',
-                    '/favicon/favicon-16x16.png',
-                ]);
-            })
-    );
-});
+self.addEventListener('install', (event) => {
+  console.log('# Service worker is installed! 🎉')
+  event.waitUntil(
+    caches.open('static').then((cache) => {
+      cache.addAll([
+        '/',
+        '/css/style.css',
+        '/favicon.ico',
+        '/favicon/android-chrome-192x192.png',
+        '/favicon/android-chrome-256x256.png',
+        '/favicon/apple-touch-icon.png',
+        '/favicon/favicon-16x16.png',
+        '/favicon/favicon-32x32.png',
+        '/favicon/mstile-150x150.png',
+        '/favicon/safari-pinned-tab.svg',
+        '/images/loader.gif',
+        '/index.html',
+        '/js/compiled/main.js',
+      ])
+    }),
+  )
+})
 
-self.addEventListener('activate', function () {
-    console.log('service worker active')
-});
+self.addEventListener('activate', () => {
+  console.log('# Service worker is active! 🎉')
+})
 
-self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        caches.match(event.request)
-            // response from cache
-            .then(function(res){
-                if (res) {
-                    return res;
-                } else {
-                    return fetch(event.request)
-                }
-            })
-    );
-});
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((res) => {
+      if (res) return res
+      return fetch(event.request)
+    }),
+  )
+})
