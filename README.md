@@ -36,6 +36,14 @@ yarn release
 
 ## Packages used
 
+### ClojureScript
+
+- [`reagent`](https://reagent-project.github.io)
+- [`binaryage/cljs-devtools`](https://github.com/binaryage/cljs-devtools)
+- [`funcool/cuerdas`](https://github.com/funcool/cuerdas)
+
+### Javascript
+
 - [`create-react-class`](https://www.npmjs.com/package/create-react-class)
 - [`react`](https://www.npmjs.com/package/react)
 - [`react-dom`](https://www.npmjs.com/package/react-dom)
